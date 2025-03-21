@@ -23,13 +23,12 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - React Router DOM
 - React Hook Form
 - React Query
-- Zod for validation
 
 ## 📦 Installation
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
+git clone git@github.com:DylanSharp/portfolio.git
 cd portfolio
 ```
 
@@ -43,7 +42,7 @@ npm install
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`
+The app will be available at `http://localhost:8080`
 
 ## 🏗️ Build
 
@@ -66,11 +65,3 @@ Run the linter:
 ```bash
 npm run lint
 ```
-
-## 📝 License
-
-[Your chosen license]
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! 

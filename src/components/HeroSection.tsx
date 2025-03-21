@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <div
                     className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/50 dark:from-background dark:via-background dark:to-background/80"/>
                 <div
-                    className="absolute top-0 right-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/2 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"/>
+                    className="absolute top-0 right-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/ 2 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"/>
                 <div
                     className="absolute bottom-0 left-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/2 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"/>
             </div>
