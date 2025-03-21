@@ -92,7 +92,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-secondary/30">
+    <section id="contact" className="bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <span className="skill-pill inline-block mb-4">Contact</span>

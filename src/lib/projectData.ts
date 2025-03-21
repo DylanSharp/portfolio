@@ -5,7 +5,7 @@ export interface Project {
   description: string;
   image: string;
   technologies: string[];
-  demo: string;
+  demo?: string;
   github: string;
   featured?: boolean;
 }
@@ -13,11 +13,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "eWage",
     description: "A full-featured e-commerce platform with product listings, shopping cart, and payment processing.",
     image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=2670&auto=format&fit=crop",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-    demo: "https://example.com",
     github: "https://github.com/example",
     featured: true
   },

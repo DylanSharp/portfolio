@@ -7,7 +7,11 @@ const HeroSection = () => {
         texts: [
             'Full Stack Developer',
             'Problem Solver',
-            'Learning Addict'
+            'Engineer at Heart',
+            'Learning Addict',
+            'Tech Enthusiast',
+            'Serial Tinkerer',
+            'Gadget Guru'
         ],
         speed: 100,
         delay: 2000

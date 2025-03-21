@@ -6,7 +6,6 @@ import { Project, projects } from '@/lib/projectData';
 
 const ProjectsSection = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
   const [visibleCount, setVisibleCount] = useState(4);
   const [isInView, setIsInView] = useState(false);
   
@@ -14,14 +13,6 @@ const ProjectsSection = () => {
     { name: 'All', value: 'all' },
     { name: 'Featured', value: 'featured' }
   ];
-
-  useEffect(() => {
-    if (selectedFilter === 'all') {
-      setFilteredProjects(projects);
-    } else if (selectedFilter === 'featured') {
-      setFilteredProjects(projects.filter((project) => project.featured));
-    }
-  }, [selectedFilter]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,11 +37,11 @@ const ProjectsSection = () => {
   }, []);
 
   const showMoreProjects = () => {
-    setVisibleCount((prev) => Math.min(prev + 3, filteredProjects.length));
+    setVisibleCount((prev) => Math.min(prev + 3, projects.length));
   };
 
   return (
-    <section id="projects" className="py-20 md:py-28 bg-secondary/30">
+    <section id="projects" className="bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <span className="skill-pill inline-block mb-4">Portfolio</span>
@@ -81,7 +72,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.slice(0, visibleCount).map((project, index) => (
+          {projects.slice(0, visibleCount).map((project, index) => (
             <div
               key={project.id}
               className={cn(
@@ -157,7 +148,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {visibleCount < filteredProjects.length && (
+        {visibleCount < projects.length && (
           <div className="flex justify-center mt-12">
             <button
               onClick={showMoreProjects}
