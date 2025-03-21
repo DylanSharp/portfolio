@@ -1,4 +1,4 @@
-import {ArrowDown} from 'lucide-react';
+import {ArrowDown, Calendar, ExternalLink} from 'lucide-react';
 import useTypewriter from '@/hooks/useTypewriter';
 import {cn} from '@/lib/utils';
 
@@ -64,9 +64,12 @@ const HeroSection = () => {
                     <div className="flex justify-center space-x-4 mt-8">
                         <a
                             href="/dylan_sharp_resume.pdf"
-                            className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                            download
+                            className="inline-flex items-center px-6 py-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                         >
-                            Download CV
+                            <Calendar className="w-4 h-4 mr-2" />
+                            <span className="font-medium">Download Full Resume</span>
+                            <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                     </div>
                 </div>
