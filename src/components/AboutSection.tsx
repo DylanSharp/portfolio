@@ -121,41 +121,6 @@ const AboutSection = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className="max-w-3xl mx-auto text-center animate-slide-up opacity-0"
-                     style={{animationDelay: "300ms"}}>
-                    <h3 className="text-xl font-semibold mb-4">My Values</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
-                        <div className={cn(
-                            "p-6 rounded-2xl bg-gradient-to-br",
-                            "from-primary/5 to-primary/10",
-                            "dark:from-primary/10 dark:to-primary/20",
-                            "border border-primary/10 transition-transform hover:scale-105"
-                        )}>
-                            <h4 className="font-medium mb-2">Learning</h4>
-                            <p className="text-sm text-muted-foreground">Always eager to learn and grow in my field</p>
-                        </div>
-                        <div className={cn(
-                            "p-6 rounded-2xl bg-gradient-to-br",
-                            "from-primary/5 to-primary/10",
-                            "dark:from-primary/10 dark:to-primary/20",
-                            "border border-primary/10 transition-transform hover:scale-105"
-                        )}>
-                            <h4 className="font-medium mb-2">Problem Solving</h4>
-                            <p className="text-sm text-muted-foreground">Finding elegant solutions to complex
-                                challenges</p>
-                        </div>
-                        <div className={cn(
-                            "p-6 rounded-2xl bg-gradient-to-br",
-                            "from-primary/5 to-primary/10",
-                            "dark:from-primary/10 dark:to-primary/20",
-                            "border border-primary/10 transition-transform hover:scale-105"
-                        )}>
-                            <h4 className="font-medium mb-2">Quality</h4>
-                            <p className="text-sm text-muted-foreground">Delivering robust and maintainable code</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     );

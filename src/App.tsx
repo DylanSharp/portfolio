@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    // Set up SEO meta tags
+
     const metaTags = [
       { name: 'description', content: 'Professional portfolio of Dylan Sharp, a skilled Full Stack Developer specializing in modern web technologies.' },
       { name: 'keywords', content: 'full stack developer, web development, frontend, backend, react, javascript, portfolio' },
