@@ -1,5 +1,4 @@
 import {BookOpen, Code, Lightbulb, Users} from 'lucide-react';
-import {cn} from '@/lib/utils';
 
 const AboutSection = () => {
     const skills = [
@@ -88,6 +87,22 @@ const AboutSection = () => {
                         </div>
 
                         <div>
+                            <h3 className="text-xl font-semibold mb-6">Supplementary Skills</h3>
+                            <div className="grid grid-cols-2 gap-4">
+                                {supplementarySkills.map((skill) => (
+                                    <div
+                                        key={skill}
+                                        className="flex items-center p-4 rounded-xl bg-secondary/50 border border-border transition-transform hover:scale-105"
+                                    >
+                                        <Code className="w-5 h-5 text-primary/70 mr-3"/>
+                                        <span className="text-sm font-medium">{skill}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+
+                        <div>
                             <h3 className="text-xl font-semibold mb-6">Soft Skills</h3>
                             <div className="grid grid-cols-2 gap-4">
                                 {softSkills.map((skill) => {
@@ -102,21 +117,6 @@ const AboutSection = () => {
                                         </div>
                                     );
                                 })}
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold mb-6">Supplementary Skills</h3>
-                            <div className="grid grid-cols-2 gap-4">
-                                {supplementarySkills.map((skill) => (
-                                    <div
-                                        key={skill}
-                                        className="flex items-center p-4 rounded-xl bg-secondary/50 border border-border transition-transform hover:scale-105"
-                                    >
-                                        <Code className="w-5 h-5 text-primary/70 mr-3"/>
-                                        <span className="text-sm font-medium">{skill}</span>
-                                    </div>
-                                ))}
                             </div>
                         </div>
                     </div>
