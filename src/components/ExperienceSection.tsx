@@ -11,13 +11,6 @@ const ExperienceSection = () => {
   const [filteredExperiences, setFilteredExperiences] = useState<ExperienceItem[]>(experiences);
   const [isInView, setIsInView] = useState(false);
 
-  const filters = [
-    { name: 'All', value: 'all' },
-    { name: 'Work', value: 'work' },
-    { name: 'Education', value: 'education' },
-    { name: 'Achievements', value: 'achievement' }
-  ];
-
   const typeIcons = {
     'work': Briefcase,
     'education': GraduationCap,
@@ -66,25 +59,6 @@ const ExperienceSection = () => {
           <p className="text-muted-foreground">
             My professional path combines industry experience, education, and continuous learning.
           </p>
-        </div>
-
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1 rounded-full bg-secondary border border-border">
-            {filters.map((filter) => (
-              <button
-                key={filter.value}
-                onClick={() => setActiveFilter(filter.value)}
-                className={cn(
-                  "px-5 py-2 rounded-full text-sm font-medium transition-all",
-                  activeFilter === filter.value
-                    ? "bg-primary text-primary-foreground shadow-sm"
-                    : "text-muted-foreground hover:bg-background/50"
-                )}
-              >
-                {filter.name}
-              </button>
-            ))}
-          </div>
         </div>
 
         <div className="relative max-w-4xl mx-auto">

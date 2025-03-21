@@ -22,11 +22,10 @@ const HeroSection = () => {
                 <div
                     className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/50 dark:from-background dark:via-background dark:to-background/80"/>
                 <div
-                    className="absolute top-0 right-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/ 2 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"/>
+                    className="absolute top-0 right-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/2 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"/>
                 <div
                     className="absolute bottom-0 left-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/2 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"/>
             </div>
-
             <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center space-y-8 z-10">
                 <div
                     className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-4 border-4 border-primary/10 shadow-xl animate-fade-in">
@@ -54,7 +53,8 @@ const HeroSection = () => {
                     </div>
 
                     <p className="text-muted-foreground max-w-md mx-auto text-balance">
-                        Fullstack Software Engineer with 6+ years of experience building robust and scalable web applications.
+                        Fullstack Software Engineer with 6+ years of experience building robust and scalable web
+                        applications.
                     </p>
 
                     <div className="flex justify-center space-x-4 mt-8">
