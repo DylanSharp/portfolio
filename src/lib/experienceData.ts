@@ -26,7 +26,7 @@ export const experiences: ExperienceItem[] = [
       'Hosted on AWS EC2 using Docker as well as other tools like S3 and RDS (Postgres).'
     ],
     skills: ['React', 'Django', 'PostgreSQL', 'AWS', 'Docker', 'S3', 'RDS'],
-    logo: '/src/assets/ewage.webp'
+    logo: '/assets/ewage.webp'
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ export const experiences: ExperienceItem[] = [
       'This was a 3 month project-based contract to build an internal tool for the Ghost team.'
     ],
     skills: ['React', 'JavaScript', 'Node.js'],
-    logo: '/src/assets/ghost_logo.png'
+    logo: '/assets/ghost_logo.png'
   },
   {
     id: 3,
@@ -74,7 +74,7 @@ export const experiences: ExperienceItem[] = [
       'Progressed well on the on internal development track and earned title of "Specialist" in my area.'
     ],
     skills: ['React', 'Flask', 'Python', 'Chrome Extensions', 'REST APIs'],
-    logo: '/src/assets/hotjar_logo.png'
+    logo: '/assets/hotjar_logo.png'
   },
   {
     id: 5,
@@ -90,7 +90,7 @@ export const experiences: ExperienceItem[] = [
       'Front end developer on hybrid mobile applications using Ionic.'
     ],
     skills: ['Ionic', 'Mobile Development', 'Backend Development', 'System Architecture'],
-    logo: '/src/assets/stratech_logo.png'
+    logo: '/assets/stratech_logo.png'
   },
   {
     id: 6,
@@ -106,7 +106,7 @@ export const experiences: ExperienceItem[] = [
       'This is where I jumped in the deep end and learned how to code on the job.'
     ],
     skills: ['Full Stack Development', 'AWS', 'Mobile Development'],
-    logo: '/src/assets/ma_logo.png'
+    logo: '/assets/ma_logo.png'
   },
   {
     id: 7,
@@ -119,6 +119,6 @@ export const experiences: ExperienceItem[] = [
     description: [
       'Mechanical Engineering degree with focus on design and manufacturing'
     ],
-    logo: '/src/assets/uct_logo.png'
+    logo: '/assets/uct_logo.png'
   }
 ];

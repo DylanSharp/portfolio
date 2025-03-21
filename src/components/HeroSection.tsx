@@ -6,9 +6,8 @@ const HeroSection = () => {
     const {displayText, isTyping} = useTypewriter({
         texts: [
             'Full Stack Developer',
-            'UI/UX Enthusiast',
             'Problem Solver',
-            'Tech Innovator'
+            'Learning Addict'
         ],
         speed: 100,
         delay: 2000
@@ -34,7 +33,7 @@ const HeroSection = () => {
                     <div
                         className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10"/>
                     <img
-                        src="src/assets/profile_photo.jpg"
+                        src="/assets/profile_photo.jpg"
                         alt="Developer Portrait"
                         className="w-full h-full object-cover"
                     />
