@@ -7,6 +7,7 @@ const ProjectsSection = () => {
     const [selectedFilter, setSelectedFilter] = useState('all');
     const [visibleCount, setVisibleCount] = useState(4);
     const [isInView, setIsInView] = useState(false);
+    const [expandedTechs, setExpandedTechs] = useState<number[]>([]);
 
     const filters = [
         {name: 'All', value: 'all'},
@@ -37,6 +38,14 @@ const ProjectsSection = () => {
 
     const showMoreProjects = () => {
         setVisibleCount((prev) => Math.min(prev + 3, projects.length));
+    };
+
+    const toggleTechsExpanded = (projectId: number) => {
+        setExpandedTechs(prev => 
+            prev.includes(projectId) 
+                ? prev.filter(id => id !== projectId) 
+                : [...prev, projectId]
+        );
     };
 
     return (
@@ -72,7 +81,7 @@ const ProjectsSection = () => {
                                 />
                             </div>
 
-                            <div className="p-6">
+                            <div className="p-6 flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold mb-2 transition-colors group-hover:text-primary">
                                     {project.title}
                                 </h3>
@@ -81,7 +90,9 @@ const ProjectsSection = () => {
                                 </p>
 
                                 <div className="flex flex-wrap gap-2 mb-6">
-                                    {project.technologies.slice(0, 3).map((tech) => (
+                                    {(expandedTechs.includes(project.id) 
+                                        ? project.technologies 
+                                        : project.technologies.slice(0, 3)).map((tech) => (
                                         <span
                                             key={tech}
                                             className="skill-pill bg-secondary/70 text-xs px-2 py-1"
@@ -89,14 +100,20 @@ const ProjectsSection = () => {
                       {tech}
                     </span>
                                     ))}
-                                    {project.technologies.length > 3 && (
-                                        <span className="skill-pill bg-secondary/70 text-xs px-2 py-1">
+                                    {!expandedTechs.includes(project.id) && project.technologies.length > 3 && (
+                                        <span 
+                                            className="skill-pill bg-secondary/70 text-xs px-2 py-1 cursor-pointer hover:bg-secondary"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                toggleTechsExpanded(project.id);
+                                            }}
+                                        >
                       +{project.technologies.length - 3}
                     </span>
                                     )}
                                 </div>
 
-                                <div className="flex justify-between items-center">
+                                <div className="flex justify-between items-center" id="project-links">
                                     {project.demo ?
                                         <a
                                             href={project.demo}
