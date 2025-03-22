@@ -31,8 +31,8 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "BitSwitch (FE)",
-    description: "Interface for an arbitrage trading bot that auto-captures the spread on the USD/ZAR/BTC market.",
+    title: "BitSwitch",
+    description: "An arbitrage trading bot and platform that auto-captures the spread on the USD/ZAR/BTC market.",
     image: "/assets/bitswitch.png",
     technologies: ["Python", "Pandas", "CCXT", "CCXT-Binance", "CCXT-Kraken", "CCXT-Bitfinex", "CCXT-Bitstamp", "CCXT-Coinbase Pro", "CCXT-Gemini", "CCXT-Huobi", "CCXT-Kucoin", "CCXT-OKX", "CCXT-Poloniex", "CCXT-Reddit", "CCXT-Twitter", "CCXT-Yahoo Finance"],
     demo: "https://bitswitch.netlify.app",
@@ -40,15 +40,6 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "BitSwitch (BE)",
-    description: "Backend for an arbitrage trading bot that auto-captures the spread on the USD/ZAR/BTC market.",
-    image: "/assets/bitswitch.png",
-    technologies: ["Python", "Django", "Postgres", "Docker", "Fly.io", "Celery"],
-    demo: "https://dylansharp.dev",
-    github: "https://github.com/DylanSharp/bitbeans-server",
-  },
-  {
-    id: 4,
     title: "Portfolio",
     description: "This portfolio website, built with React and Tailwind CSS.",
     image: "/assets/portfolio.png",
