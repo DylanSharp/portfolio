@@ -159,6 +159,13 @@ const ContactSection = () => {
                 <div className="h-px bg-border" />
                 
                 <div>
+                  <p className="text-sm font-medium mb-2">Citizenship</p>
+                  <p className="text-muted-foreground">Dual-citizen of South Africa and the United Kingdom</p>
+                </div>
+                
+                <div className="h-px bg-border" />
+                
+                <div>
                   <p className="text-sm font-medium mb-3">Availability</p>
                   <div className="flex flex-col space-y-2">
                     <p className="text-muted-foreground text-sm">Available from: Now</p>
