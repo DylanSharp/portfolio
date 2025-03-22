@@ -1,6 +1,6 @@
 export interface ExperienceItem {
   id: number;
-  type: 'work' | 'education' | 'certification' | 'achievement';
+  type: 'work' | 'education' | 'certification' | 'achievement' | 'sabbatical';
   title: string;
   organization: string;
   location: string;
@@ -45,7 +45,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 3,
-    type: 'work',
+    type: 'sabbatical',
     title: 'Career Break / Sabbatical',
     organization: '',
     location: 'South Africa',

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {Award, Briefcase, Calendar, Clock, ExternalLink, GraduationCap, MapPin} from 'lucide-react';
+import {Award, Briefcase, Calendar, Clock, ExternalLink, GraduationCap, MapPin, TreePalm} from 'lucide-react';
 import {cn} from '@/lib/utils';
 import {ExperienceItem, experiences} from '@/lib/experienceData';
 
@@ -12,7 +12,8 @@ const ExperienceSection = () => {
         'work': Briefcase,
         'education': GraduationCap,
         'certification': Award,
-        'achievement': Award
+        'achievement': Award,
+        'sabbatical': TreePalm
     };
 
     useEffect(() => {
