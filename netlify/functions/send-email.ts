@@ -38,6 +38,13 @@ const handler: Handler = async (event) => {
     }
 
     // Initialize Resend
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY environment variable is not set');
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Server configuration error: Missing API key' }),
+      };
+    }
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Prepare and send the email
