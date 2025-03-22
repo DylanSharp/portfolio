@@ -100,7 +100,7 @@ const ExperienceSection = () => {
                                     {/* Date Section (Left on desktop) */}
                                     <div className={cn(
                                         "pl-10 md:pl-0 md:pr-10 md:w-1/2 mb-4 md:mb-0",
-                                        index % 2 === 0 ? "md:pl-4 md:pr-0 md:text-left" : "md:text-right"
+                                        index % 2 === 0 ? "md:pl-8 md:pr-0 md:text-left" : "md:text-right"
                                     )}>
                                         <div
                                             className={cn(
