@@ -49,7 +49,7 @@ const handler: Handler = async (event) => {
 
     // Prepare and send the email
     const { data, error } = await resend.emails.send({
-      from: process.env.FROM_EMAIL || 'hello@dylansharp.dev',
+      from: 'onboarding@resend.dev',
       to: process.env.TO_EMAIL || '',
       subject: `New Contact Form Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
