@@ -1,6 +1,6 @@
 import {ArrowDown, Calendar, ExternalLink} from 'lucide-react';
-import useTypewriter from '@/hooks/useTypewriter';
 import {cn} from '@/lib/utils';
+import useTypewriter from "@/hooks/use-typewriter.ts";
 
 const HeroSection = () => {
     const {displayText, isTyping} = useTypewriter({
