@@ -1,5 +1,5 @@
 import { Handler } from '@netlify/functions';
-import * as sgMail from '@sendgrid/mail';
+import { Resend } from 'resend';
 
 interface ContactFormData {
   name: string;
@@ -37,13 +37,13 @@ const handler: Handler = async (event) => {
       };
     }
 
-    // Initialize SendGrid
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
+    // Initialize Resend
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-    // Prepare the email
-    const msg = {
-      to: process.env.TO_EMAIL || '', // Your email address
-      from: process.env.FROM_EMAIL || '', // Verified sender email in SendGrid
+    // Prepare and send the email
+    const { data, error } = await resend.emails.send({
+      from: process.env.FROM_EMAIL || 'hello@dylansharp.dev',
+      to: process.env.TO_EMAIL || '',
       subject: `New Contact Form Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
@@ -53,14 +53,19 @@ const handler: Handler = async (event) => {
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
-    };
+    });
 
-    // Send the email
-    await sgMail.send(msg);
+    if (error) {
+      console.error('Error sending email:', error);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Error sending email' }),
+      };
+    }
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Email sent successfully' }),
+      body: JSON.stringify({ message: 'Email sent successfully', id: data?.id }),
     };
   } catch (error) {
     console.error('Error sending email:', error);
