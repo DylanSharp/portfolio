@@ -1,21 +1,21 @@
-import {BookOpen, Code, Lightbulb, Users} from 'lucide-react';
+import { BookOpen, Code, Lightbulb, Users } from 'lucide-react';
 
 const AboutSection = () => {
     const skills = [
-        {name: 'Python', level: 80},
-        {name: 'JavaScript', level: 90},
-        {name: 'React', level: 80},
-        {name: 'React Native', level: 65},
-        {name: 'Tailwind CSS', level: 90},
-        {name: 'PostgreSQL', level: 80},
-        {name: 'Node.js', level: 65}
+        { name: 'Python', level: 80 },
+        { name: 'JavaScript', level: 90 },
+        { name: 'React', level: 80 },
+        { name: 'React Native', level: 65 },
+        { name: 'Tailwind CSS', level: 90 },
+        { name: 'PostgreSQL', level: 80 },
+        { name: 'Node.js', level: 65 }
     ];
 
     const softSkills = [
-        {name: 'Problem Solving', icon: Lightbulb},
-        {name: 'Communication', icon: Users},
-        {name: 'Adaptability', icon: BookOpen},
-        {name: 'Leadership', icon: Code}
+        { name: 'Problem Solving', icon: Lightbulb },
+        { name: 'Communication', icon: Users },
+        { name: 'Adaptability', icon: BookOpen },
+        { name: 'Leadership', icon: Code }
     ];
 
     const supplementarySkills = [
@@ -39,10 +39,10 @@ const AboutSection = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-                    <div className="space-y-6 animate-slide-up opacity-0" style={{animationDelay: "100ms"}}>
+                    <div className="space-y-6 animate-slide-up opacity-0" style={{ animationDelay: "100ms" }}>
                         <div className="glass-container p-6 md:p-8">
                             <h3 className="text-xl font-semibold mb-4 flex items-center">
-                                <Code className="w-5 h-5 mr-2 text-primary/70"/>
+                                <Code className="w-5 h-5 mr-2 text-primary/70" />
                                 Professional Journey
                             </h3>
                             <p className="text-muted-foreground">
@@ -55,7 +55,7 @@ const AboutSection = () => {
 
                         <div className="glass-container p-6 md:p-8">
                             <h3 className="text-xl font-semibold mb-4 flex items-center">
-                                <Lightbulb className="w-5 h-5 mr-2 text-primary/70"/>
+                                <Lightbulb className="w-5 h-5 mr-2 text-primary/70" />
                                 Personal Life
                             </h3>
                             <p className="text-muted-foreground">
@@ -65,7 +65,7 @@ const AboutSection = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-8 animate-slide-up opacity-0" style={{animationDelay: "200ms"}}>
+                    <div className="space-y-8 animate-slide-up opacity-0" style={{ animationDelay: "200ms" }}>
                         <div>
                             <h3 className="text-xl font-semibold mb-6">Core Skills</h3>
                             <div className="space-y-4">
@@ -78,7 +78,7 @@ const AboutSection = () => {
                                         <div className="h-2 bg-secondary rounded-full overflow-hidden">
                                             <div
                                                 className="h-full bg-primary rounded-full"
-                                                style={{width: `${skill.level}%`, transition: "width 1s ease-in-out"}}
+                                                style={{ width: `${skill.level}%`, transition: "width 1s ease-in-out" }}
                                             />
                                         </div>
                                     </div>
@@ -94,7 +94,7 @@ const AboutSection = () => {
                                         key={skill}
                                         className="flex items-center p-4 rounded-xl bg-secondary/50 border border-border transition-transform hover:scale-105"
                                     >
-                                        <Code className="w-5 h-5 text-primary/70 mr-3"/>
+                                        <Code className="w-5 h-5 text-primary/70 mr-3" />
                                         <span className="text-sm font-medium">{skill}</span>
                                     </div>
                                 ))}
@@ -112,7 +112,7 @@ const AboutSection = () => {
                                             key={skill.name}
                                             className="flex items-center p-4 rounded-xl bg-secondary/50 border border-border transition-transform hover:scale-105"
                                         >
-                                            <Icon className="w-5 h-5 text-primary/70 mr-3"/>
+                                            <Icon className="w-5 h-5 text-primary/70 mr-3" />
                                             <span className="text-sm font-medium">{skill.name}</span>
                                         </div>
                                     );

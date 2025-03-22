@@ -7,12 +7,12 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -24,7 +24,7 @@ const Header = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Contact', href: '#contact' },
   ];
-  
+
   return (
     <header className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md",
@@ -40,7 +40,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
+            <a
               key={link.name}
               href={link.href}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -48,14 +48,14 @@ const Header = () => {
               {link.name}
             </a>
           ))}
-          
+
           <ThemeToggle />
         </nav>
 
         {/* Mobile Menu Toggle */}
         <div className="flex md:hidden items-center gap-4">
           <ThemeToggle />
-          <button 
+          <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-primary p-1"
             aria-label="Toggle menu"

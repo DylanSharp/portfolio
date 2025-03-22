@@ -5,12 +5,12 @@ import { cn } from '@/lib/utils';
 
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(false);
-  
+
   useEffect(() => {
     // Check if user has a theme preference in localStorage
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
       setIsDark(true);
       document.documentElement.classList.add('dark');
@@ -19,7 +19,7 @@ const ThemeToggle = () => {
       document.documentElement.classList.remove('dark');
     }
   }, []);
-  
+
   const toggleTheme = () => {
     setIsDark(prev => {
       const newTheme = !prev;
@@ -33,7 +33,7 @@ const ThemeToggle = () => {
       return newTheme;
     });
   };
-  
+
   return (
     <button
       onClick={toggleTheme}

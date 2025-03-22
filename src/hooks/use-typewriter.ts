@@ -1,11 +1,11 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
 export default function useTypewriter({
-                                          texts,
-                                          speed = 100,
-                                          delay = 500,
-                                          loop = true
-                                      }) {
+    texts,
+    speed = 100,
+    delay = 500,
+    loop = true
+}) {
     const [displayText, setDisplayText] = useState('')
     const [isTyping, setIsTyping] = useState(false)
     const [textIndex, setTextIndex] = useState(0)
@@ -39,5 +39,5 @@ export default function useTypewriter({
         }
     }, [charIndex, textIndex, texts, speed, delay, loop, isDeleting, isPaused])
 
-    return {displayText, isTyping}
+    return { displayText, isTyping }
 }

@@ -1,7 +1,7 @@
-import {useEffect, useState} from 'react';
-import {Award, Briefcase, Calendar, Clock, ExternalLink, GraduationCap, MapPin, TreePalm} from 'lucide-react';
-import {cn} from '@/lib/utils';
-import {ExperienceItem, experiences} from '@/lib/experienceData';
+import { useEffect, useState } from 'react';
+import { Award, Briefcase, Calendar, Clock, ExternalLink, GraduationCap, MapPin, TreePalm } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { ExperienceItem, experiences } from '@/lib/experienceData';
 
 const ExperienceSection = () => {
     const [activeFilter, setActiveFilter] = useState<string>('all');
@@ -33,7 +33,7 @@ const ExperienceSection = () => {
                     setIsInView(true);
                 }
             },
-            {threshold: 0.1}
+            { threshold: 0.1 }
         );
 
         const section = document.getElementById('experience');
@@ -62,7 +62,7 @@ const ExperienceSection = () => {
                 <div className="relative max-w-4xl mx-auto">
                     {/* Timeline Line */}
                     <div
-                        className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border -ml-px md:transform md:-translate-x-px"/>
+                        className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border -ml-px md:transform md:-translate-x-px" />
 
                     {/* Experience Items */}
                     <div className="space-y-12">
@@ -94,7 +94,7 @@ const ExperienceSection = () => {
                                         className="absolute left-0 md:left-1/2 -ml-3.5 md:-ml-0.5 md:transform md:-translate-x-1/2 flex items-center justify-center">
                                         <div
                                             className="w-7 h-7 rounded-full bg-primary z-10 flex items-center justify-center text-primary-foreground">
-                                            <Icon className="w-3.5 h-3.5"/>
+                                            <Icon className="w-3.5 h-3.5" />
                                         </div>
                                     </div>
 
@@ -110,13 +110,13 @@ const ExperienceSection = () => {
                                             )}>
                                             {index % 2 === 0 ? (
                                                 <>
-                                                    <Clock className="w-4 h-4 mr-1 inline md:hidden"/>
+                                                    <Clock className="w-4 h-4 mr-1 inline md:hidden" />
                                                     <span>{exp.startDate} - {exp.endDate}</span>
                                                 </>
                                             ) : (
                                                 <>
                                                     <span>{exp.startDate} - {exp.endDate}</span>
-                                                    <Clock className="w-4 h-4 ml-1 inline md:hidden"/>
+                                                    <Clock className="w-4 h-4 ml-1 inline md:hidden" />
                                                 </>
                                             )}
                                         </div>
@@ -146,7 +146,7 @@ const ExperienceSection = () => {
                                                     <h4 className="text-base font-medium">{exp.organization}</h4>
                                                     <div
                                                         className="flex items-center text-sm text-muted-foreground mb-3 mt-1">
-                                                        <MapPin className="w-3.5 h-3.5 mr-1"/>
+                                                        <MapPin className="w-3.5 h-3.5 mr-1" />
                                                         {exp.location}
                                                     </div>
                                                 </div>
@@ -167,8 +167,8 @@ const ExperienceSection = () => {
                                                             key={skill}
                                                             className="skill-pill bg-secondary/70 text-xs px-2 py-1"
                                                         >
-                              {skill}
-                            </span>
+                                                            {skill}
+                                                        </span>
                                                     ))}
                                                 </div>
                                             )}
@@ -186,9 +186,9 @@ const ExperienceSection = () => {
                         download
                         className="inline-flex items-center px-6 py-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                     >
-                        <Calendar className="w-4 h-4 mr-2"/>
+                        <Calendar className="w-4 h-4 mr-2" />
                         <span className="font-medium">Download Full Resume</span>
-                        <ExternalLink className="w-4 h-4 ml-2"/>
+                        <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                 </div>
             </div>

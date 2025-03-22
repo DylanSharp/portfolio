@@ -1,9 +1,9 @@
-import {ArrowDown, Calendar, ExternalLink} from 'lucide-react';
-import {cn} from '@/lib/utils';
+import { ArrowDown, Calendar, ExternalLink } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import useTypewriter from "@/hooks/use-typewriter.ts";
 
 const HeroSection = () => {
-    const {displayText, isTyping} = useTypewriter({
+    const { displayText, isTyping } = useTypewriter({
         texts: [
             'Full Stack Developer',
             'Problem Solver',
@@ -22,17 +22,17 @@ const HeroSection = () => {
         >
             <div className="absolute inset-0 -z-10">
                 <div
-                    className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/50 dark:from-background dark:via-background dark:to-background/80"/>
+                    className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/50 dark:from-background dark:via-background dark:to-background/80" />
                 <div
-                    className="absolute top-0 right-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/2 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"/>
+                    className="absolute top-0 right-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/2 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
                 <div
-                    className="absolute bottom-0 left-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/2 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"/>
+                    className="absolute bottom-0 left-0 bg-primary/5 dark:bg-primary/10 w-1/2 h-1/2 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
             </div>
             <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center space-y-8 z-10">
                 <div
                     className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-4 border-4 border-primary/10 shadow-xl animate-fade-in">
                     <div
-                        className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10"/>
+                        className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10" />
                     <img
                         src="/assets/profile_photo.jpg"
                         alt="Developer Portrait"
@@ -65,9 +65,9 @@ const HeroSection = () => {
                             download
                             className="inline-flex items-center px-6 py-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                         >
-                            <Calendar className="w-4 h-4 mr-2"/>
+                            <Calendar className="w-4 h-4 mr-2" />
                             <span className="font-medium">Download Full Resume</span>
-                            <ExternalLink className="w-4 h-4 ml-2"/>
+                            <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const HeroSection = () => {
 
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-subtle">
                 <a href="#about" aria-label="Scroll to About section">
-                    <ArrowDown className="h-6 w-6 text-primary/80"/>
+                    <ArrowDown className="h-6 w-6 text-primary/80" />
                 </a>
             </div>
         </section>

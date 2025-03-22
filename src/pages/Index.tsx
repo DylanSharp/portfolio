@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -48,15 +48,15 @@ const Index = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
-            <Header/>
+            <Header />
             <main>
-                <HeroSection/>
-                <AboutSection/>
-                <ProjectsSection/>
-                <ExperienceSection/>
-                <ContactSection/>
+                <HeroSection />
+                <AboutSection />
+                <ProjectsSection />
+                <ExperienceSection />
+                <ContactSection />
             </main>
-            <Footer/>
+            <Footer />
         </div>
     );
 };
