@@ -8,10 +8,8 @@ const HeroSection = () => {
             'Full Stack Developer',
             'Problem Solver',
             'Engineer at Heart',
-            'Learning Addict',
-            'Tech Enthusiast',
-            'Serial Tinkerer',
-            'Gadget Guru'
+            'Builder of Things',
+            'Learning Addict'
         ],
         speed: 100,
         delay: 2000
