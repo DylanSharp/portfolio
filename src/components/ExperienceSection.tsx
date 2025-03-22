@@ -90,7 +90,7 @@ const ExperienceSection = () => {
                                 >
                                     {/* Timeline Node */}
                                     <div
-                                        className="absolute left-0 md:left-1/2 -ml-3.5 md:-ml-3.5 md:transform md:-translate-x-1/2 flex items-center justify-center">
+                                        className="absolute left-0 md:left-1/2 -ml-3.5 md:-ml-0.5 md:transform md:-translate-x-1/2 flex items-center justify-center">
                                         <div
                                             className="w-7 h-7 rounded-full bg-primary z-10 flex items-center justify-center text-primary-foreground">
                                             <Icon className="w-3.5 h-3.5"/>
