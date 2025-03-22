@@ -67,9 +67,9 @@ const HeroSection = () => {
                             download
                             className="inline-flex items-center px-6 py-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                         >
-                            <Calendar className="w-4 h-4 mr-2" />
+                            <Calendar className="w-4 h-4 mr-2"/>
                             <span className="font-medium">Download Full Resume</span>
-                            <ExternalLink className="w-4 h-4 ml-2" />
+                            <ExternalLink className="w-4 h-4 ml-2"/>
                         </a>
                     </div>
                 </div>

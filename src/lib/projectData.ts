@@ -1,4 +1,14 @@
-
+/**
+ * Represents a project in the portfolio
+ * @interface Project
+ * @property {number} id - Unique identifier for the project
+ * @property {string} title - The name of the project
+ * @property {string} description - A brief description of the project and its purpose
+ * @property {string} image - URL or path to the project's preview image
+ * @property {string[]} technologies - Array of technologies, frameworks, or tools used in the project
+ * @property {string} [demo] - Optional URL to the live demo of the project
+ * @property {string} [github] - Optional URL to the project's GitHub repository
+ */
 export interface Project {
   id: number;
   title: string;
@@ -6,65 +16,44 @@ export interface Project {
   image: string;
   technologies: string[];
   demo?: string;
-  github: string;
-  featured?: boolean;
+  github?: string;
 }
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "eWage",
-    description: "A full-featured e-commerce platform with product listings, shopping cart, and payment processing.",
-    image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=2670&auto=format&fit=crop",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-    github: "https://github.com/example",
-    featured: true
+    title: "Windsock",
+    description: "A simple mobile app that scrapes relevant weather data and displays it in a convenient format for paragliders and model flyers in Port Elizabeth, South Africa.",
+    image: "/assets/windsock.png",
+    technologies: ["Capacitor", "Supabase", "Tailwind CSS", "TypeScript"],
+    demo: "https://play.google.com/store/apps/details?id=com.dmsapps.windsock",
+    github: "https://github.com/dmsapps/windsock",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and team workspace features.",
-    image: "https://images.unsplash.com/photo-1611224885990-ab7363d7f2a9?q=80&w=2669&auto=format&fit=crop",
-    technologies: ["React", "Firebase", "Tailwind CSS", "Redux"],
-    demo: "https://example.com",
-    github: "https://github.com/example"
+    title: "BitSwitch (FE)",
+    description: "Interface for an arbitrage trading bot that auto-captures the spread on the USD/ZAR/BTC market.",
+    image: "/assets/bitswitch.png",
+    technologies: ["Python", "Pandas", "CCXT", "CCXT-Binance", "CCXT-Kraken", "CCXT-Bitfinex", "CCXT-Bitstamp", "CCXT-Coinbase Pro", "CCXT-Gemini", "CCXT-Huobi", "CCXT-Kucoin", "CCXT-OKX", "CCXT-Poloniex", "CCXT-Reddit", "CCXT-Twitter", "CCXT-Yahoo Finance"],
+    demo: "https://bitswitch.netlify.app",
+    github: "https://github.com/DylanSharp/bitswitch",
   },
   {
     id: 3,
-    title: "Health & Fitness Tracker",
-    description: "A comprehensive health and fitness tracking application with visualization and goal-setting features.",
-    image: "https://images.unsplash.com/photo-1615859131861-052f0641a60e?q=80&w=2574&auto=format&fit=crop",
-    technologies: ["React Native", "GraphQL", "TypeScript", "D3.js"],
-    demo: "https://example.com",
-    github: "https://github.com/example",
-    featured: true
+    title: "BitSwitch (BE)",
+    description: "Backend for an arbitrage trading bot that auto-captures the spread on the USD/ZAR/BTC market.",
+    image: "/assets/bitswitch.png",
+    technologies: ["Python", "Django", "Postgres", "Docker", "Fly.io", "Celery"],
+    demo: "https://dylansharp.dev",
+    github: "https://github.com/DylanSharp/bitbeans-server",
   },
   {
     id: 4,
-    title: "Real Estate Marketplace",
-    description: "A property listing and search platform with interactive maps and filtering capabilities.",
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2896&auto=format&fit=crop",
-    technologies: ["Vue.js", "Node.js", "PostgreSQL", "Mapbox"],
-    demo: "https://example.com",
-    github: "https://github.com/example"
-  },
-  {
-    id: 5,
-    title: "Learning Management System",
-    description: "An educational platform for creating and managing online courses with student progress tracking.",
-    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?q=80&w=2670&auto=format&fit=crop",
-    technologies: ["React", "Express", "MongoDB", "AWS S3"],
-    demo: "https://example.com",
-    github: "https://github.com/example"
-  },
-  {
-    id: 6,
-    title: "AI Image Generator",
-    description: "A creative tool that generates unique images based on text prompts using machine learning.",
-    image: "https://images.unsplash.com/photo-1655721528985-c491cc2ecb7c?q=80&w=2574&auto=format&fit=crop",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-    demo: "https://example.com",
-    github: "https://github.com/example",
-    featured: true
+    title: "Portfolio",
+    description: "This portfolio website, built with React and Tailwind CSS.",
+    image: "/assets/portfolio.png",
+    technologies: ["React", "Tailwind", "TypeScript"],
+    demo: "https://dylansharp.dev",
+    github: "https://github.com/DylanSharp/portfolio",
   }
 ];
