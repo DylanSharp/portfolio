@@ -1,7 +1,7 @@
-import {useEffect, useState} from 'react';
-import {ArrowRight, ExternalLink, Github} from 'lucide-react';
-import {cn} from '@/lib/utils';
-import {projects} from '@/lib/projectData';
+import { useEffect, useState } from 'react';
+import { ArrowRight, ExternalLink, Github } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { projects } from '@/lib/projectData';
 
 const ProjectsSection = () => {
     const [selectedFilter, setSelectedFilter] = useState('all');
@@ -10,8 +10,8 @@ const ProjectsSection = () => {
     const [expandedTechs, setExpandedTechs] = useState<number[]>([]);
 
     const filters = [
-        {name: 'All', value: 'all'},
-        {name: 'Featured', value: 'featured'}
+        { name: 'All', value: 'all' },
+        { name: 'Featured', value: 'featured' }
     ];
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const ProjectsSection = () => {
                     setIsInView(true);
                 }
             },
-            {threshold: 0.1}
+            { threshold: 0.1 }
         );
 
         const section = document.getElementById('projects');
@@ -41,9 +41,9 @@ const ProjectsSection = () => {
     };
 
     const toggleTechsExpanded = (projectId: number) => {
-        setExpandedTechs(prev => 
-            prev.includes(projectId) 
-                ? prev.filter(id => id !== projectId) 
+        setExpandedTechs(prev =>
+            prev.includes(projectId)
+                ? prev.filter(id => id !== projectId)
                 : [...prev, projectId]
         );
     };
@@ -69,11 +69,11 @@ const ProjectsSection = () => {
                                 "hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1",
                                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                             )}
-                            style={{transitionDelay: `${index * 100}ms`}}
+                            style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <div
-                                    className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"/>
+                                    className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -90,26 +90,26 @@ const ProjectsSection = () => {
                                 </p>
 
                                 <div className="flex flex-wrap gap-2 mb-6">
-                                    {(expandedTechs.includes(project.id) 
-                                        ? project.technologies 
+                                    {(expandedTechs.includes(project.id)
+                                        ? project.technologies
                                         : project.technologies.slice(0, 3)).map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="skill-pill bg-secondary/70 text-xs px-2 py-1"
-                                        >
-                      {tech}
-                    </span>
-                                    ))}
+                                            <span
+                                                key={tech}
+                                                className="skill-pill bg-secondary/70 text-xs px-2 py-1"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
                                     {!expandedTechs.includes(project.id) && project.technologies.length > 3 && (
-                                        <span 
+                                        <span
                                             className="skill-pill bg-secondary/70 text-xs px-2 py-1 cursor-pointer hover:bg-secondary"
                                             onClick={(e) => {
                                                 e.preventDefault();
                                                 toggleTechsExpanded(project.id);
                                             }}
                                         >
-                      +{project.technologies.length - 3}
-                    </span>
+                                            +{project.technologies.length - 3}
+                                        </span>
                                     )}
                                 </div>
 
@@ -122,7 +122,7 @@ const ProjectsSection = () => {
                                             className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                                         >
                                             Live Demo
-                                            <ExternalLink className="w-4 h-4 ml-1"/>
+                                            <ExternalLink className="w-4 h-4 ml-1" />
                                         </a> : <div></div>
                                     }
 
@@ -133,7 +133,7 @@ const ProjectsSection = () => {
                                         className="inline-flex items-center text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                                     >
                                         Code
-                                        <Github className="w-4 h-4 ml-1"/>
+                                        <Github className="w-4 h-4 ml-1" />
                                     </a>
                                 </div>
                             </div>
@@ -148,7 +148,7 @@ const ProjectsSection = () => {
                             className="flex items-center gap-2 px-6 py-2 rounded-full text-sm font-medium bg-secondary hover:bg-secondary/80 transition-colors"
                         >
                             Load More
-                            <ArrowRight className="w-4 h-4"/>
+                            <ArrowRight className="w-4 h-4" />
                         </button>
                     </div>
                 )}
