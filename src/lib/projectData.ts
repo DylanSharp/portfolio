@@ -34,7 +34,7 @@ export const projects: Project[] = [
     title: "BitSwitch",
     description: "An arbitrage trading bot and platform that auto-captures the spread on the USD/ZAR/BTC market.",
     image: "/assets/bitswitch.png",
-    technologies: ["Python", "Pandas", "CCXT", "CCXT-Binance", "CCXT-Kraken", "CCXT-Bitfinex", "CCXT-Bitstamp", "CCXT-Coinbase Pro", "CCXT-Gemini", "CCXT-Huobi", "CCXT-Kucoin", "CCXT-OKX", "CCXT-Poloniex", "CCXT-Reddit", "CCXT-Twitter", "CCXT-Yahoo Finance"],
+    technologies: ["Python", "Django", "React", "Tailwind CSS", "TypeScript", "Netlify", "Fly.io", "Celery", "Docker", "PostgreSQL", "Celery"],
     demo: "https://bitswitch.netlify.app",
     github: "https://github.com/DylanSharp/bitswitch",
   },
