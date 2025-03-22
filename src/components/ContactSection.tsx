@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Github, Linkedin, Mail, Send, AlertCircle, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Send, AlertCircle, Twitter, Copy, Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 
@@ -12,6 +12,7 @@ const ContactSection = () => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -91,6 +92,28 @@ const ContactSection = () => {
     }
   };
 
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        setIsCopied(true);
+        toast({
+          title: "Copied to clipboard",
+          description: "Email address has been copied to clipboard",
+          duration: 2000,
+        });
+        setTimeout(() => setIsCopied(false), 2000);
+      })
+      .catch((err) => {
+        console.error('Could not copy text: ', err);
+        toast({
+          title: "Failed to copy",
+          description: "Please try again",
+          variant: "destructive",
+          duration: 2000,
+        });
+      });
+  };
+
   return (
     <section id="contact" className="bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
@@ -110,18 +133,23 @@ const ContactSection = () => {
               <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
               
               <div className="space-y-5">
-                <a 
-                  href="mailto:hello@dylansharp.dev" 
-                  className="flex items-center group hover:text-primary transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
+                <div className="flex items-center">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4 transition-colors">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="flex-grow">
                     <p className="text-sm font-medium">Email</p>
                     <p className="text-muted-foreground">hello@dylansharp.dev</p>
                   </div>
-                </a>
+                  <button
+                    type="button"
+                    onClick={() => copyToClipboard('hello@dylansharp.dev')}
+                    className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary/5 text-primary/40 transition-colors"
+                    aria-label="Copy email to clipboard"
+                  >
+                    {isCopied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                  </button>
+                </div>
                 
                 <div className="h-px bg-border" />
                 
