@@ -194,9 +194,11 @@ const ContactSection = () => {
                       name="name" 
                       value={formState.name}
                       onChange={handleChange}
+                      disabled={isSubmitting}
                       className={cn(
                         "w-full px-4 py-3 bg-background border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all",
-                        errors.name ? "border-destructive" : "border-border"
+                        errors.name ? "border-destructive" : "border-border",
+                        isSubmitting && "opacity-60 cursor-not-allowed"
                       )}
                       placeholder="Your name"
                     />
@@ -222,9 +224,11 @@ const ContactSection = () => {
                       name="email" 
                       value={formState.email}
                       onChange={handleChange}
+                      disabled={isSubmitting}
                       className={cn(
                         "w-full px-4 py-3 bg-background border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all",
-                        errors.email ? "border-destructive" : "border-border"
+                        errors.email ? "border-destructive" : "border-border",
+                        isSubmitting && "opacity-60 cursor-not-allowed"
                       )}
                       placeholder="your.email@example.com"
                     />
@@ -249,10 +253,12 @@ const ContactSection = () => {
                       name="message" 
                       value={formState.message}
                       onChange={handleChange}
+                      disabled={isSubmitting}
                       rows={6} 
                       className={cn(
                         "w-full px-4 py-3 bg-background border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none",
-                        errors.message ? "border-destructive" : "border-border"
+                        errors.message ? "border-destructive" : "border-border",
+                        isSubmitting && "opacity-60 cursor-not-allowed"
                       )}
                       placeholder="Your message..."
                     />
