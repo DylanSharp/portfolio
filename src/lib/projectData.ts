@@ -27,7 +27,7 @@ export const projects: Project[] = [
     image: "/assets/windsock.png",
     technologies: ["Capacitor", "Supabase", "Tailwind CSS", "TypeScript"],
     demo: "https://play.google.com/store/apps/details?id=com.dmsapps.windsock",
-    github: "https://github.com/dmsapps/windsock",
+    github: "https://github.com/DylanSharp/windsock",
   },
   {
     id: 2,
