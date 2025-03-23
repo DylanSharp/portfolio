@@ -60,7 +60,7 @@ const AboutSection = () => {
                             </h3>
                             <p className="text-muted-foreground">
                                 I'm married to an amazing woman and father to 2 wonderful boys. When I'm not coding,
-                                I spend most of my time with my family and enjoying the outdoors.
+                                I spend most of my time with my family and enjoying the outdoors. I absolutely love pineapples on pizza. 🍍🍕
                             </p>
                         </div>
                     </div>
