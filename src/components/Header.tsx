@@ -72,7 +72,7 @@ const Header = () => {
       {/* Mobile Menu */}
       <div className={cn(
         "md:hidden absolute w-full bg-background/95 backdrop-blur-md transition-all duration-300 border-b border-border",
-        isMobileMenuOpen ? "max-h-64 py-4 opacity-100" : "max-h-0 py-0 opacity-0 overflow-hidden"
+        isMobileMenuOpen ? "max-h-80 py-4 opacity-100" : "max-h-0 py-0 opacity-0 overflow-hidden"
       )}>
         <nav className="container mx-auto px-4 flex flex-col space-y-4">
           {navLinks.map((link) => (
