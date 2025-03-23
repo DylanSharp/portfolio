@@ -68,19 +68,14 @@ const AboutSection = () => {
                     <div className="space-y-8 animate-slide-up opacity-0" style={{ animationDelay: "200ms" }}>
                         <div>
                             <h3 className="text-xl font-semibold mb-6">Core Skills</h3>
-                            <div className="space-y-4">
+                            <div className="grid grid-cols-2 gap-4">
                                 {skills.map((skill) => (
-                                    <div key={skill.name} className="space-y-2">
-                                        <div className="flex justify-between items-center">
-                                            <span className="text-sm font-medium">{skill.name}</span>
-                                            <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                                        </div>
-                                        <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                                            <div
-                                                className="h-full bg-primary rounded-full"
-                                                style={{ width: `${skill.level}%`, transition: "width 1s ease-in-out" }}
-                                            />
-                                        </div>
+                                    <div
+                                        key={skill.name}
+                                        className="flex items-center p-4 rounded-xl bg-primary/10 border border-border transition-transform hover:scale-105"
+                                    >
+                                        <Code className="w-5 h-5 text-primary/70 mr-3" />
+                                        <span className="text-sm font-medium">{skill.name}</span>
                                     </div>
                                 ))}
                             </div>
