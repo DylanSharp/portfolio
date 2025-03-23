@@ -9,6 +9,7 @@ export interface ExperienceItem {
   description: string[];
   skills?: string[];
   logo?: string;
+  companySummary?: string;
 }
 
 export const experiences: ExperienceItem[] = [
@@ -23,7 +24,8 @@ export const experiences: ExperienceItem[] = [
     description: [
       'Mechanical Engineering degree with focus on design and manufacturing'
     ],
-    logo: '/assets/uct_logo.png'
+    logo: '/assets/uct_logo.png',
+    companySummary: 'University of Cape Town is a prestigious institution in South Africa known for its academic excellence and research contributions.'
   },
   {
     id: 2,
@@ -39,7 +41,8 @@ export const experiences: ExperienceItem[] = [
       'This is where I jumped in the deep end and learned how to code on the job.'
     ],
     skills: ['Full Stack Development', 'AWS', 'Mobile Development'],
-    logo: '/assets/ma_logo.png'
+    logo: '/assets/ma_logo.png',
+    companySummary: 'Modality Apps develops hybrid mobile applications for businesses. This is where I began my coding journey with very little prior experience, learning on the job.'
   },
   {
     id: 3,
@@ -55,7 +58,8 @@ export const experiences: ExperienceItem[] = [
       'Front end developer on hybrid mobile applications using Ionic.'
     ],
     skills: ['Ionic', 'Mobile Development', 'Backend Development', 'System Architecture'],
-    logo: '/assets/stratech_logo.png'
+    logo: '/assets/stratech_logo.png',
+    companySummary: 'Stratech provides contracted engineering work building fintech related solutions for clients.'
   },
   {
     id: 4,
@@ -73,7 +77,8 @@ export const experiences: ExperienceItem[] = [
       'Progressed well on the on internal development track and earned title of "Specialist" in my area.'
     ],
     skills: ['React', 'Flask', 'Python', 'Chrome Extensions', 'REST APIs'],
-    logo: '/assets/hotjar_logo.png'
+    logo: '/assets/hotjar_logo.png',
+    companySummary: 'Hotjar is a web analytics and feedback platform that helps website owners and UX designers improve their user experience through insights and visuals.'
   },
   {
     id: 5,
@@ -84,11 +89,12 @@ export const experiences: ExperienceItem[] = [
     startDate: 'Mar 2021',
     endDate: 'Oct 2022',
     description: [
-      'Spent time with my my wife and newborn son.',
+      'Spent time with my my wife and newborn son. My wife was very ill and bedbound for almost a year so I helped a lot with our son.',
       'Travelled in South Africa.',
       'Pursued hobbies.',
       'Learned new skills.'
-    ]
+    ],
+    companySummary: 'A period of personal growth and family time, focusing on life outside of professional work.'
   },
   {
     id: 6,
@@ -103,7 +109,8 @@ export const experiences: ExperienceItem[] = [
       'This was a 3 month project-based contract to build an internal tool for the Ghost team.'
     ],
     skills: ['React', 'JavaScript', 'Node.js'],
-    logo: '/assets/ghost_logo.png'
+    logo: '/assets/ghost_logo.png',
+    companySummary: 'The Ghost Foundation is a non-profit organization that builds open-source publishing software, including the popular Ghost blogging platform.'
   },
   {
     id: 7,
@@ -119,7 +126,8 @@ export const experiences: ExperienceItem[] = [
       'Hosted on AWS EC2 using Docker as well as other tools like S3 and RDS (Postgres).'
     ],
     skills: ['React', 'Django', 'PostgreSQL', 'AWS', 'Docker', 'S3', 'RDS'],
-    logo: '/assets/ewage.webp'
+    logo: '/assets/ewage.webp',
+    companySummary: 'eWage is a small startup that provides digital payslips and leave management, allowing employees to access their information anytime and anywhere.'
   },
   {
     id: 8,
@@ -131,9 +139,10 @@ export const experiences: ExperienceItem[] = [
     endDate: 'Present',
     description: [
       'Worked on 2 different startups ideas.',
-      'Changed many nappies.',
-      'Received many cuddles.',
-      'Was driven to exhaustion and the edge of my sanity on a rollercoaster of emotions every daily.'
-    ]
+      'Made some money with my BitSwitch trading bot (see projects).',
+      'Helped care for and educate our boys who we educate at home.',
+      'Ate plenty of pineapple on pizza. 🍍🍕'
+    ],
+    companySummary: 'A period focusing on family responsibilities while simultaneously exploring entrepreneurial opportunities through various startup ventures.'
   }
 ];

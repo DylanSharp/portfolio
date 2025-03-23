@@ -4,7 +4,6 @@ import { cn } from '@/lib/utils';
 import { ExperienceItem, experiences } from '@/lib/experienceData';
 
 const ExperienceSection = () => {
-    const [activeFilter, setActiveFilter] = useState<string>('all');
     const [filteredExperiences, setFilteredExperiences] = useState<ExperienceItem[]>([...experiences].reverse());
     const [isInView, setIsInView] = useState(false);
 
@@ -15,16 +14,6 @@ const ExperienceSection = () => {
         'achievement': Award,
         'sabbatical': TreePalm
     };
-
-    useEffect(() => {
-        if (activeFilter === 'all') {
-            setFilteredExperiences([...experiences].reverse());
-        } else {
-            setFilteredExperiences(
-                [...experiences].filter((exp) => exp.type === activeFilter).reverse()
-            );
-        }
-    }, [activeFilter]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -152,6 +141,13 @@ const ExperienceSection = () => {
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            {/* Add company summary */}
+                                            {exp.companySummary && (
+                                                <div className="mt-4 mb-6 text-sm text-muted-foreground border-l-2 border-primary/30 pl-3">
+                                                    {exp.companySummary}
+                                                </div>
+                                            )}
 
                                             <ul className="space-y-1 mt-3 text-sm text-muted-foreground">
                                                 {exp.description.map((item, i) => (
