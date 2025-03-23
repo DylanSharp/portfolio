@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, ExternalLink, Github, ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { projects } from '@/lib/projectData';
 
@@ -8,6 +8,7 @@ const ProjectsSection = () => {
     const [visibleCount, setVisibleCount] = useState(4);
     const [isInView, setIsInView] = useState(false);
     const [expandedTechs, setExpandedTechs] = useState<number[]>([]);
+    const [expandedDetails, setExpandedDetails] = useState<number[]>([]);
 
     const filters = [
         { name: 'All', value: 'all' },
@@ -48,6 +49,14 @@ const ProjectsSection = () => {
         );
     };
 
+    const toggleDetailsExpanded = (projectId: number) => {
+        setExpandedDetails(prev =>
+            prev.includes(projectId)
+                ? prev.filter(id => id !== projectId)
+                : [...prev, projectId]
+        );
+    };
+
     return (
         <section id="projects" className="bg-secondary/30">
             <div className="container mx-auto px-4 md:px-6">
@@ -65,7 +74,7 @@ const ProjectsSection = () => {
                         <div
                             key={project.id}
                             className={cn(
-                                "group rounded-xl overflow-hidden bg-card border border-border transition-all duration-500",
+                                "group rounded-xl overflow-hidden bg-card border border-border transition-all duration-500 flex flex-col h-full",
                                 "hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1",
                                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                             )}
@@ -81,15 +90,38 @@ const ProjectsSection = () => {
                                 />
                             </div>
 
-                            <div className="p-6 flex flex-col justify-between">
-                                <h3 className="text-xl font-semibold mb-2 transition-colors group-hover:text-primary">
-                                    {project.title}
-                                </h3>
-                                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                                    {project.description}
-                                </p>
+                            <div className="p-6 flex flex-col flex-grow">
+                                <div>
+                                    <h3 className="text-xl font-semibold mb-1 transition-colors group-hover:text-primary">
+                                        {project.title}
+                                    </h3>
+                                    <span className="text-xs text-muted-foreground mb-2 block">{project.dateRange}</span>
+                                    <p className="text-muted-foreground text-sm mb-2">
+                                        {project.description}
+                                    </p>
+                                    {project.details && (
+                                        <>
+                                            <p className={cn(
+                                                "text-muted-foreground text-sm mt-2",
+                                                !expandedDetails.includes(project.id) && "line-clamp-2"
+                                            )}>
+                                                {project.details}
+                                            </p>
+                                            <button 
+                                                onClick={() => toggleDetailsExpanded(project.id)}
+                                                className="text-primary text-xs mt-2 flex items-center hover:underline"
+                                            >
+                                                {expandedDetails.includes(project.id) ? (
+                                                    <>Read less <ChevronUp className="ml-1 h-3 w-3" /></>
+                                                ) : (
+                                                    <>Read more <ChevronDown className="ml-1 h-3 w-3" /></>
+                                                )}
+                                            </button>
+                                        </>
+                                    )}
+                                </div>
 
-                                <div className="flex flex-wrap gap-2 mb-6">
+                                <div className="flex flex-wrap gap-2 my-4">
                                     {(expandedTechs.includes(project.id)
                                         ? project.technologies
                                         : project.technologies.slice(0, 3)).map((tech) => (
@@ -113,28 +145,32 @@ const ProjectsSection = () => {
                                     )}
                                 </div>
 
-                                <div className="flex justify-between items-center" id="project-links">
-                                    {project.demo ?
+                                <div className="mt-auto pt-2 border-t">
+                                    <div className="flex justify-between items-center w-full pt-2" id="project-links">
+                                        <div>
+                                            {project.demo && (
+                                                <a
+                                                    href={project.demo}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                                                >
+                                                    Live Demo
+                                                    <ExternalLink className="w-4 h-4 ml-1" />
+                                                </a>
+                                            )}
+                                        </div>
+                                        
                                         <a
-                                            href={project.demo}
+                                            href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                                            className="inline-flex items-center text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                                         >
-                                            Live Demo
-                                            <ExternalLink className="w-4 h-4 ml-1" />
-                                        </a> : <div></div>
-                                    }
-
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-                                    >
-                                        Code
-                                        <Github className="w-4 h-4 ml-1" />
-                                    </a>
+                                            Code
+                                            <Github className="w-4 h-4 ml-1" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

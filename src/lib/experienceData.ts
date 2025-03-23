@@ -64,21 +64,21 @@ export const experiences: ExperienceItem[] = [
   {
     id: 4,
     type: 'work',
-    title: 'Software Engineer',
+    title: 'Specialist Support Engineer & Software Engineer',
     organization: 'Hotjar by ContentSquare',
-    location: 'Remote (Malta Based)',
+    location: 'Fully Remote',
     startDate: 'Dec 2017',
     endDate: 'Mar 2021',
     description: [
-      'Worked primary on internal support tools including a React app, a chrome extension and other integrations.',
-      'Built and maintained Rest APIs in Flask.',
-      'Was an interim-team lead for 4 months.',
-      'Mentored more junior engineers in my own team and in the support department.',
-      'Progressed well on the on internal development track and earned title of "Specialist" in my area.'
+      'Helped solve top tier customer issues and bugs.',
+      'Helped improve the efficiency of the support team by building and improving internal tools.',
+      'Communicated with the engineering teams to help them understand the needs of the support team and the customers.',
+      'Worked on internal support tools including a React app, a chrome extension and Zendesk integration.',
+      'Acted as interim team lead of the internal tools team for 4 months.'
     ],
-    skills: ['React', 'Flask', 'Python', 'Chrome Extensions', 'REST APIs'],
+    skills: ['React', 'Flask', 'Python', 'Chrome Extensions', 'Zednesk', 'REST APIs'],
     logo: '/assets/hotjar_logo.png',
-    companySummary: 'Hotjar is a web analytics and feedback platform that helps website owners and UX designers improve their user experience through insights and visuals.'
+    companySummary: 'At Hotjar I spent 1 year in the product team and then voluntarily moved to the support department to work on internal tools and solve customer issues.'
   },
   {
     id: 5,
