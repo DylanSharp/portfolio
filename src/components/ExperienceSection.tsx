@@ -5,7 +5,7 @@ import { ExperienceItem, experiences } from '@/lib/experienceData';
 
 const ExperienceSection = () => {
     const [activeFilter, setActiveFilter] = useState<string>('all');
-    const [filteredExperiences, setFilteredExperiences] = useState<ExperienceItem[]>(experiences);
+    const [filteredExperiences, setFilteredExperiences] = useState<ExperienceItem[]>([...experiences].reverse());
     const [isInView, setIsInView] = useState(false);
 
     const typeIcons = {
@@ -18,10 +18,10 @@ const ExperienceSection = () => {
 
     useEffect(() => {
         if (activeFilter === 'all') {
-            setFilteredExperiences(experiences);
+            setFilteredExperiences([...experiences].reverse());
         } else {
             setFilteredExperiences(
-                experiences.filter((exp) => exp.type === activeFilter)
+                [...experiences].filter((exp) => exp.type === activeFilter).reverse()
             );
         }
     }, [activeFilter]);
@@ -66,8 +66,9 @@ const ExperienceSection = () => {
 
                     {/* Experience Items */}
                     <div className="space-y-12">
-                        {filteredExperiences.map((exp, index) => {
-                            const Icon = typeIcons[exp.type];
+                        {filteredExperiences
+                            .map((exp, index) => {
+                                const Icon = typeIcons[exp.type];
 
                             return (
                                 <div

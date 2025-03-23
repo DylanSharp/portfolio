@@ -14,49 +14,48 @@ export interface ExperienceItem {
 export const experiences: ExperienceItem[] = [
   {
     id: 1,
-    type: 'work',
-    title: 'Founding Engineer',
-    organization: 'Ewage',
-    location: 'Port Elizabeth, South Africa',
-    startDate: 'Jan 2022',
-    endDate: 'Feb 2024',
+    type: 'education',
+    title: 'Bachelor of Science in Mechanical Engineering',
+    organization: 'University of Cape Town',
+    location: 'South Africa',
+    startDate: 'Jan 2008',
+    endDate: 'Dec 2012',
     description: [
-      'A founding member, principal engineer and a director of the company.',
-      'Scratch built the application using tools like React, Django, and PostgreSQL.',
-      'Hosted on AWS EC2 using Docker as well as other tools like S3 and RDS (Postgres).'
+      'Mechanical Engineering degree with focus on design and manufacturing'
     ],
-    skills: ['React', 'Django', 'PostgreSQL', 'AWS', 'Docker', 'S3', 'RDS'],
-    logo: '/assets/ewage.webp'
+    logo: '/assets/uct_logo.png'
   },
   {
     id: 2,
     type: 'work',
-    title: 'Software Engineer',
-    organization: 'Ghost',
-    location: 'Remote (Singapore Based)',
-    startDate: 'Oct 2022',
-    endDate: 'Dec 2022',
+    title: 'Junior Software Engineer',
+    organization: 'Modality Apps',
+    location: '50% Remote (South Africa Based)',
+    startDate: 'Mar 2015',
+    endDate: 'Oct 2016',
     description: [
-      'Built a React app to replace a CLI tool that the support team uses to manage users and accounts etc.',
-      'This was a 3 month project-based contract to build an internal tool for the Ghost team.'
+      'Primary full-stack developer on web apps to provide "back office" interfaces for hybrid mobile apps.',
+      'Managed and setup all the infrastructure (small scale) in AWS.',
+      'This is where I jumped in the deep end and learned how to code on the job.'
     ],
-    skills: ['React', 'JavaScript', 'Node.js'],
-    logo: '/assets/ghost_logo.png'
+    skills: ['Full Stack Development', 'AWS', 'Mobile Development'],
+    logo: '/assets/ma_logo.png'
   },
   {
     id: 3,
-    type: 'sabbatical',
-    title: 'Career Break / Sabbatical',
-    organization: '',
-    location: 'South Africa',
-    startDate: 'Mar 2021',
-    endDate: 'Oct 2022',
+    type: 'work',
+    title: 'Software Engineer',
+    organization: 'Stratech',
+    location: 'Remote (South Africa Based)',
+    startDate: 'Nov 2016',
+    endDate: 'Oct 2017',
     description: [
-      'Spent time with my my wife and (at the time) newborn son.',
-      'Travelled in South Africa.',
-      'Pursued hobbies.',
-      'Learned new skills.'
-    ]
+      'Lead backend developer on several diverse projects in the fintech space.',
+      'Systems architecture and planning.',
+      'Front end developer on hybrid mobile applications using Ionic.'
+    ],
+    skills: ['Ionic', 'Mobile Development', 'Backend Development', 'System Architecture'],
+    logo: '/assets/stratech_logo.png'
   },
   {
     id: 4,
@@ -78,47 +77,63 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 5,
-    type: 'work',
-    title: 'Software Engineer',
-    organization: 'Stratech',
-    location: 'Remote (South Africa Based)',
-    startDate: 'Nov 2016',
-    endDate: 'Oct 2017',
+    type: 'sabbatical',
+    title: 'Career Break / Sabbatical',
+    organization: '',
+    location: 'South Africa',
+    startDate: 'Mar 2021',
+    endDate: 'Oct 2022',
     description: [
-      'Lead backend developer on several diverse projects in the fintech space.',
-      'Systems architecture and planning.',
-      'Front end developer on hybrid mobile applications using Ionic.'
-    ],
-    skills: ['Ionic', 'Mobile Development', 'Backend Development', 'System Architecture'],
-    logo: '/assets/stratech_logo.png'
+      'Spent time with my my wife and newborn son.',
+      'Travelled in South Africa.',
+      'Pursued hobbies.',
+      'Learned new skills.'
+    ]
   },
   {
     id: 6,
     type: 'work',
-    title: 'Junior Software Engineer',
-    organization: 'Modality Apps',
-    location: '50% Remote (South Africa Based)',
-    startDate: 'Mar 2015',
-    endDate: 'Oct 2016',
+    title: 'Software Engineer',
+    organization: 'Ghost',
+    location: 'Remote (Singapore Based)',
+    startDate: 'Oct 2022',
+    endDate: 'Dec 2022',
     description: [
-      'Primary full-stack developer on web apps to provide "back office" interfaces for hybrid mobile apps.',
-      'Managed and setup all the infrastructure (small scale) in AWS.',
-      'This is where I jumped in the deep end and learned how to code on the job.'
+      'Built a React app to replace a CLI tool that the support team uses to manage users and accounts etc.',
+      'This was a 3 month project-based contract to build an internal tool for the Ghost team.'
     ],
-    skills: ['Full Stack Development', 'AWS', 'Mobile Development'],
-    logo: '/assets/ma_logo.png'
+    skills: ['React', 'JavaScript', 'Node.js'],
+    logo: '/assets/ghost_logo.png'
   },
   {
     id: 7,
-    type: 'education',
-    title: 'Bachelor of Science in Mechanical Engineering',
-    organization: 'University of Cape Town',
-    location: 'South Africa',
-    startDate: 'Jan 2008',
-    endDate: 'Dec 2012',
+    type: 'work',
+    title: 'Founding Engineer',
+    organization: 'Ewage',
+    location: 'Port Elizabeth, South Africa',
+    startDate: 'Jan 2022',
+    endDate: 'Feb 2024',
     description: [
-      'Mechanical Engineering degree with focus on design and manufacturing'
+      'A founding member, principal engineer and a director of the company.',
+      'Scratch built the application using tools like React, Django, and PostgreSQL.',
+      'Hosted on AWS EC2 using Docker as well as other tools like S3 and RDS (Postgres).'
     ],
-    logo: '/assets/uct_logo.png'
+    skills: ['React', 'Django', 'PostgreSQL', 'AWS', 'Docker', 'S3', 'RDS'],
+    logo: '/assets/ewage.webp'
+  },
+  {
+    id: 8,
+    type: 'work',
+    title: 'Parenting / Startup Ventures',
+    organization: 'Self Employed',
+    location: 'South Africa',
+    startDate: 'Feb 2024',
+    endDate: 'Present',
+    description: [
+      'Worked on 2 different startups ideas.',
+      'Changed many nappies.',
+      'Received many cuddles.',
+      'Was driven to exhaustion and the edge of my sanity on a rollercoaster of emotions every daily.'
+    ]
   }
 ];
