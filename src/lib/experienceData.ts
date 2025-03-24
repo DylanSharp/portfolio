@@ -140,8 +140,7 @@ export const experiences: ExperienceItem[] = [
     description: [
       'Worked on 2 different startups ideas.',
       'Made some money with my BitSwitch trading bot (see projects).',
-      'Helped care for and educate our boys who we educate at home.',
-      'Ate plenty of pineapple on pizza. 🍍🍕'
+      'Helped care for and educate our boys who we educate at home.'
     ],
     companySummary: 'A period focusing on family responsibilities while simultaneously exploring entrepreneurial opportunities through various startup ventures.'
   }
