@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { Github, Linkedin, Mail, Send, AlertCircle, Twitter, Copy, Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
+import { useTooltip } from '@/hooks/use-tooltip';
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const { tooltipProps, TooltipComponent } = useTooltip();
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -116,6 +118,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="bg-secondary/30">
+      <TooltipComponent content="Click to copy" />
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <span className="skill-pill inline-block mb-4">Contact</span>
@@ -133,22 +136,21 @@ const ContactSection = () => {
               <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
 
               <div className="space-y-5">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4 transition-colors">
+                <div 
+                  className="flex items-center cursor-pointer group"
+                  onClick={() => copyToClipboard('hello@dylansharp.dev')}
+                  {...tooltipProps}
+                  aria-label="Click to copy email address"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4 transition-colors group-hover:bg-primary/20">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div className="flex-grow">
                     <p className="text-sm font-medium">Email</p>
-                    <p className="text-muted-foreground">hello@dylansharp.dev</p>
+                    <span className="text-muted-foreground group-hover:text-primary transition-colors">
+                      hello@dylansharp.dev
+                    </span>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => copyToClipboard('hello@dylansharp.dev')}
-                    className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary/5 text-primary/40 transition-colors"
-                    aria-label="Copy email to clipboard"
-                  >
-                    {isCopied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                  </button>
                 </div>
 
                 <div className="h-px bg-border" />
