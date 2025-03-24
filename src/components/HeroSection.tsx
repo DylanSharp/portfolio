@@ -6,6 +6,7 @@ const HeroSection = () => {
     const { displayText, isTyping } = useTypewriter({
         texts: [
             'Full Stack Developer',
+            'Technical Support Engineer',
             'Problem Solver',
             'Engineer at Heart',
             'Builder of Things',
