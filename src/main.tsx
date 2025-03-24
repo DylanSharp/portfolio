@@ -3,18 +3,14 @@ import App from './App.tsx'
 import './index.css'
 import { PostHogProvider } from 'posthog-js/react'
 
-// Declare the variables defined in vite.config.ts
-declare const __POSTHOG_HOST__: string;
-declare const __POSTHOG_KEY__: string;
-
-// Use the variables defined in vite.config.ts
+// Use Vite's built-in env variable system
 const options = {
-    api_host: __POSTHOG_HOST__
+    api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST
 }
 
 createRoot(document.getElementById("root")!).render(
     <PostHogProvider
-        apiKey={__POSTHOG_KEY__}
+        apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY}
         options={options}
     >
         <App />
