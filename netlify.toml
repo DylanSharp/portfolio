@@ -10,4 +10,13 @@
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
-  status = 200 
+  status = 200
+
+# Environment variables available during build
+[build.environment]
+  NODE_VERSION = "18"
+
+# Environment variables available to the client-side code
+[context.production.environment]
+  VITE_PUBLIC_POSTHOG_HOST = ""
+  VITE_PUBLIC_POSTHOG_KEY = "" 
