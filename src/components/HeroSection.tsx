@@ -62,7 +62,7 @@ const HeroSection = () => {
 
                     <div className="flex justify-center space-x-4 mt-8">
                         <a
-                            href="/dylan_sharp_resume.pdf"
+                            href="/Dylan-Sharp-CV.pdf"
                             download
                             className="inline-flex items-center px-6 py-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                         >
