@@ -46,10 +46,10 @@ const AboutSection = () => {
                                 Professional Journey
                             </h3>
                             <p className="text-muted-foreground">
-                                I thrive on learning new things and solving challenging problems. My journey from
-                                mechanical engineering
-                                to software development has given me a unique perspective on problem-solving and system
-                                design.
+                                I thrive on learning new things and solving challenging problems. This led me to study mechanical engineering but I later realised that I much preferred building and problem solving with software.
+                                <br />
+                                <br />
+                                I was fortunate to find someone that took a chance on me and gave me the opportunity to learn and grow as a developer when I had no experience. I've never looked back.
                             </p>
                         </div>
 
@@ -59,8 +59,16 @@ const AboutSection = () => {
                                 Personal Life
                             </h3>
                             <p className="text-muted-foreground">
-                                I'm married to an amazing woman and father to 2 wonderful boys. When I'm not coding,
-                                I spend most of my time with my family and enjoying the outdoors. Pineapple on pizza is the absolute best. 🍍🍕
+                                I'm fortunate to have been married to the same amazing woman for 9 years and father to 2 wonderful little boys.
+                                <br />
+                                <br />
+                                When I'm not coding, I spend most of my time with them and enjoying the outdoors. We currently live on a beautiful piece of land surrounded by nature. We have a huge veggie garden
+                                <br />
+                                <br />
+                                I love to build things with software but I also love to build things with my hands. Sometimes it's woodwork other times it's sourdough bread. When something breaks I reach for my toolbox.
+                                <br />
+                                <br />
+                                We love to travel and experience new things. We love a bit of adventure and occassionally some adrenaline.
                             </p>
                         </div>
                     </div>

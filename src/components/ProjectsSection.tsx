@@ -64,7 +64,7 @@ const ProjectsSection = () => {
                     <span className="skill-pill inline-block mb-4">Portfolio</span>
                     <h2 className="section-heading">My Recent Projects</h2>
                     <p className="text-muted-foreground">
-                        Here are some of my recent work that showcases my skills and experience.
+                        Here are some of my recent personal projects that showcases my skills and experience.
                         Each project reflects my ability to solve complex problems and work with different technologies.
                     </p>
                 </div>
